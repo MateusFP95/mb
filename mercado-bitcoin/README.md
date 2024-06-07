@@ -1,30 +1,26 @@
-# React + TypeScript + Vite
+# Desafio Mercado Bitcoin
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Esta aplicação React usa Axios para fazer requisições HTTP, React Hook Form para gerenciamento de formulários e Yup para validação de formulários.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Recursos
 
-## Expanding the ESLint configuration
+- **Axios**: Para fazer requisições HTTP para APIs.
+- **React Hook Form**: Para criar e gerenciar formulários.
+- **React Router DOM**: Para navegação entre páginas.
+- **ContextAPI**: Para gerenciamento de estado.
+- **Yup**: Para validação de formulários.
+- **Express**: Para lidar com os endpoints do backend.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## Instalação
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- Clonar o projeto starter: `git clone https://github.com/MateusFP95/mb.git`;
+- Acessar a pasta mercado-bitcoin: `cd mercado-bitcoin`;
+- Instalar as dependências do projeto executando: `npm i`;
+- Executar o comando `nodemon server/server.js` para executar o servidor backend (rodando em http://localhost:3000);
+- Após isso, executar o comando `npm run dev` para executar o frontend (rodando em http://127.0.0.1:5173/registration);
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+---
