@@ -12,6 +12,7 @@
 - **ContextAPI**: Para gerenciamento de estado.
 - **Yup**: Para validação de formulários.
 - **Express**: Para lidar com os endpoints do backend.
+- **React Icons**: Ícones.
 
 ---
 
