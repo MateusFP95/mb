@@ -12,7 +12,8 @@ const registrationSchema = () =>
     }),
     cpf: yup.string().when("type", {
       is: "fisica",
-      then: () => yup.string().required('CPF é obrigatório para pessoa fisica'),
+      then: () => yup.string().required('CPF é obrigatório para pessoa fisica')
+      .test("min", "Seu CPF deve ter pelo menos 11 caracteres", (value) => { return value && value.length < 14 ? false : true; })
     }),
     dataNascimento: yup.string().when("type", {
       is: "fisica",
@@ -25,13 +26,17 @@ const registrationSchema = () =>
     }),
     cnpj: yup.string().when('type', {
       is: 'juridica',
-      then: () => yup.string().required('CNPJ é obrigatório'),
+      then: () => yup.string().required('CNPJ é obrigatório')
+      .test("min", "Seu CNPJ deve ter pelo menos 14 caracteres", (value) => { return value && value.length < 18 ? false : true; }),
     }),
     dataAbertura: yup.string().when('type', {
       is: 'juridica',
       then: () => yup.string().required('Data de abertura é obrigatória'),
     }),
-    senha: yup.string().required('Senha é obrigatória')
+    senha: yup.string()
+    .required('Senha é obrigatória')
+    .test("min", "Sua senha deve ter pelo menos 8 caracteres", (value) => { return value && value.length >= 8 ? true : false; }
+    ),
   });
 
 export const useRegistrationSchema = () => {
